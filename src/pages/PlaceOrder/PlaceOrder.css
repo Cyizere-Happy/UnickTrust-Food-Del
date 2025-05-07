@@ -1,0 +1,308 @@
+/* added */
+.location-dropdown {
+  position: absolute;
+  background-color: white;
+  border-radius: 7px;
+  width: 60%;
+  max-height: 250px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  margin-left: 0.5px;
+  padding: 0;
+  list-style-type: none;
+}
+.icon-location{
+  position: relative;
+}
+.icon-location i{
+  left: 2%;
+  top: 20%;
+  position: absolute;
+  font-size: larger;
+}
+
+.location-dropdown li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.location-dropdown li:hover {
+  background-color: rgb(239, 239, 239);
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .service-container {
+    flex: 1;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+ }
+  
+  .service-header {
+    margin-bottom: 40px;
+  }
+  
+  .step-indicator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+    padding: 0 20px;
+  }
+  
+  /* Connecting lines between steps */
+  .step-indicator::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 80px;
+    right: 80px;
+    height: 2px;
+    background-color: #e0e0e0;
+    z-index: 1;
+  }
+  
+  .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    z-index: 2;
+    width: 100px;
+  }
+  
+  .step-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f2f5;
+    margin-bottom: 8px;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s ease;
+  }
+  
+  .active-step-circle {
+    background-color: #175784;
+    color: #ffffff;
+    border-color: #175784;
+    transform: scale(1.1);
+  }
+  
+  /* Completed step lines */
+  .step.completed .step-circle + .step-line {
+    background-color: #175784;
+  }
+  
+  .step-text {
+    font-size: 14px;
+    color: #666;
+    transition: color 0.3s ease;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  .active-step-text {
+    color: #175784;
+    font-weight: 600;
+  }
+  
+  .service-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* ===== Enhanced Form Styling ===== */
+  .form-group {
+    margin-bottom: 25px;
+  }
+  
+  .form-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+    letter-spacing: 0.2px;
+  }
+  
+  /* Base input styling */
+  .form-input,
+  .form-textarea,
+  .multi-fields input,
+  .form-group input[type="text"],
+  .form-group input[type="email"] {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #f9fafb;
+    transition: all 0.3s ease;
+    margin-bottom: 16px;
+    color: #333;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Input hover state */
+  .form-input:hover,
+  .form-textarea:hover,
+  .multi-fields input:hover,
+  .form-group input[type="text"]:hover,
+  .form-group input[type="email"]:hover {
+    border-color: #c0c0c0;
+  }
+  
+  /* Input focus state */
+  .form-input:focus,
+  .form-textarea:focus,
+  .multi-fields input:focus,
+  .form-group input[type="text"]:focus,
+  .form-group input[type="email"]:focus {
+    outline: none;
+    border-color: #175784;
+    box-shadow: 0 0 0 3px rgba(23, 87, 132, 0.15);
+    background-color: #fff;
+  }
+  
+  /* Textarea specific styling */
+  .form-textarea {
+    min-height: 100px;
+    resize: vertical;
+    line-height: 1.5;
+    font-family: inherit;
+  }
+  
+  /* Multi-fields container */
+  .multi-fields {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 0;
+  }
+  
+  .multi-fields input {
+    flex: 1;
+    margin-bottom: 16px;
+  }
+  
+  /* Placeholder styling */
+  ::placeholder {
+    color: #9ca3af;
+    opacity: 1;
+  }
+  
+  /* Time and date input styling */
+  .form-group input[type="date"],
+  .form-group input[type="time"] {
+    cursor: pointer;
+    padding-right: 10px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+  }
+  
+  /* Form validation */
+  .form-input.error,
+  .form-textarea.error {
+    border-color: #e53e3e;
+    box-shadow: 0 0 0 1px rgba(229, 62, 62, 0.1);
+  }
+  
+  .form-error-message {
+    color: #e53e3e;
+    font-size: 12px;
+    margin-top: -12px;
+    margin-bottom: 12px;
+  }
+  
+  /* Special styling for the location input group */
+  .location-input-group {
+    margin-top: 24px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+  }
+  
+  
+  /* Cart Total Styling */
+  .cart-total-2 {
+    width: 350px;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin: auto;
+  }
+  
+  .cart-total-2 h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .cart-total-details-2 {
+    display: flex;
+    justify-content: space-between;
+    color: #555;
+    font-size: 15px;
+    padding: 8px 0;
+  }
+  
+  .cart-total-2 hr {
+    margin: 8px 0;
+    border: none;
+    height: 1px;
+    background-color: #f0f0f0;
+  }
+  
+  .cart-total-2 button {
+    width: 100%;
+    border: none;
+    color: white;
+    background-color: #175784;
+    padding: 14px 0;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(99, 132, 171, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .cart-total-2 button:hover {
+    background-color: #0d3450;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(99, 132, 171, 0.3);
+  }
+  
+  .cart-total-2 b {
+    font-size: 16px;
+    color: #333;
+  }

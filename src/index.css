@@ -1,0 +1,48 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+html {
+  scroll-padding-top: 100px; 
+}
+
+body{
+  min-height: 100vh;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.app{
+  width: 80%;
+  margin: auto;
+  padding-top: 100px ;
+}
+
+.Toastify__toast--success {
+  border-left: 5px solid #175784 !important;
+  color: #175784;
+}
+
+.Toastify__toast--success svg {
+  fill: #175784 !important;
+}
+
+/* Target the actual progress bar color */
+.Toastify__toast--success .Toastify__progress-bar {
+  background-color: #175784 !important;
+}
+
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}

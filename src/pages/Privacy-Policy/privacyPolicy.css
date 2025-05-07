@@ -1,0 +1,135 @@
+.privacyPolicy-container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding: 40px;
+    background-color: #f9f9f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    align-items: flex-start;
+    justify-content: space-between; /* Make sure there’s spacing between elements */
+}
+
+.left-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+}
+
+.left-side img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px; /* Slightly rounder corners */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+    float: right;
+}
+
+.left-side img:hover {
+    transform: scale(1.07); /* Subtle zoom effect on hover */
+}
+
+.right-side {
+    flex: 2;
+    max-width: 800px;
+    overflow-y: auto;
+    padding-right: 20px;
+}
+
+.right-side h1 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-weight: 700; /* Stronger title */
+}
+
+.right-side h2 {
+    margin-top: 30px;
+    font-size: 1.6rem;
+    color: #007BFF;
+    font-weight: 600;
+}
+
+.right-side h4 {
+    margin-top: 15px;
+    font-weight: 600;
+    color: #444;
+}
+
+.right-side ul {
+    margin-left: 20px;
+    padding-left: 15px;
+    list-style: disc;
+}
+
+.right-side p {
+    margin-bottom: 15px;
+    font-size: 1.1rem; /* Slightly larger text for readability */
+    line-height: 1.8;
+}
+
+.right-side a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.right-side a:hover {
+    text-decoration: underline;
+    color: #0056b3; /* Darker blue on hover */
+}
+
+@media (max-width: 1024px) {
+    .privacyPolicy-container {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px; /* Reduce gap in mobile view */
+    }
+
+    .left-side {
+        max-width: 100%;
+        margin-bottom: 20px; /* Add space below image */
+    }
+
+    .right-side {
+        padding: 0;
+    }
+
+    .right-side h1 {
+        font-size: 1.8rem; /* Slightly smaller title for mobile */
+    }
+
+    .right-side h2 {
+        font-size: 1.4rem; /* Adjust subheading size for mobile */
+    }
+
+    .right-side p {
+        font-size: 1rem; /* Adjust paragraph size for mobile */
+    }
+
+    .right-side ul {
+        margin-left: 15px;
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .privacyPolicy-container {
+        padding: 15px;
+        gap: 15px; /* Even tighter spacing for very small screens */
+    }
+
+    .right-side h1 {
+        font-size: 1.6rem; /* Adjust heading size for small devices */
+    }
+
+    .left-side img {
+        max-width: 80%; /* Slightly reduce image size for small screens */
+    }
+}

@@ -1,0 +1,55 @@
+
+@keyframes bounceDownload {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+/* Main Section */
+.app-download {
+    margin: 100px auto 0;
+    font-size: max(2.5vw, 20px);
+    text-align: center;
+    padding: 0 5vw;
+    color: #1a1a1a;
+}
+
+.app-download h2 {
+    font-size: clamp(22px, 3vw, 36px);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.app-download p {
+    color: #555;
+    font-size: clamp(14px, 1.2vw, 18px);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+/* Download Buttons */
+.app-download-platforms {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: max(2.5vw, 20px);
+    flex-wrap: wrap;
+}
+
+.app-download-platforms img {
+    width: max(28vw, 120px);
+    max-width: 180px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: bounceDownload 2s ease-in-out infinite;
+}
+
+.app-download-platforms img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}

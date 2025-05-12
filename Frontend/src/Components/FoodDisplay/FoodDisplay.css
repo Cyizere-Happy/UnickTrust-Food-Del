@@ -1,0 +1,88 @@
+.food-display{
+    margin-top: 30px;
+}
+.food-display h2{
+    font-size: max(2vw,24px);
+    font-weight: 600;
+}
+.food-display-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
+    margin-top: 30px;
+    gap: 30px;
+    row-gap: 50px;
+}
+
+.signup {
+    display: flex;
+}
+
+.signup .left {
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.signup .left button{
+    background-color: #175784;
+    border: 2px solid #175784;
+    border-radius: 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+.signup .left button:hover{
+    transform: translateY(-2px);
+    background-color: transparent;
+    box-shadow: 0 4px 12px rgba(179, 36, 0, 0.15);
+    color: black;
+}
+
+.signup .left button::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+}
+.signup .left button:hover::after{
+    left: 100%;
+}
+.signup .left h2{
+    animation: pulse 2s infinite;
+    font-size: max(1vw,15px);
+}
+
+.signup .right {
+    width: 50%;
+}
+
+.signup img {
+    width: 100%;
+    max-width: 500px;
+}
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }

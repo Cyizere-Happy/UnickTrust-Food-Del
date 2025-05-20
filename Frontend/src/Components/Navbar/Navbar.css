@@ -1,0 +1,187 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 1000;
+}
+.navbar-inner {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+  
+.navbar.dark-navbar{
+    background-color: rgba(19, 24, 46, 0.95);
+    transition: 0.5s ease-in-out;
+}
+
+.navbar .logo{
+    width: 120px;
+}
+
+.cart-img{
+    width: 23px;
+}
+.navbar-menu{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: #49557e;
+    font-size: 18px;
+}
+
+.navbar-menu.dark-navbar{
+    color: rgb(212, 224, 253);
+}
+
+.navbar-right{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navbar button{
+    background: transparent;
+    font-size: 12px;
+    color: #49557e;
+    border: 1px solid #175784;
+    padding: 9px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navbar button:hover{
+    background-color: #f2f5ff;
+}
+
+.navbar .active{
+    padding-bottom: 2px;
+    border-bottom: 2px solid #49557e;
+}
+
+
+.navbar li{
+    cursor: pointer;
+}
+
+.navbar-search-icon{
+    position: relative;
+}
+.navbar-search-icon .dot{
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: #175784;
+    border-radius: 5px;
+    top:-8px;
+    right: -8px;
+}
+.navbar-profile{
+    position: relative;
+}
+.navbar-profile img{
+    width: 20px;
+}
+.nav-profile-dropdown{
+   position: absolute;
+   display: none;
+   right:0;
+   z-index: 1;
+}
+
+.navbar-profile:hover .nav-profile-dropdown{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #f2f5ff;
+    padding: 12px 25px;
+    border-radius: 4px;
+    border: 1px solid #175784;
+    outline:  2px solid white;
+    list-style: none;
+}
+
+.nav-profile-dropdown li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.nav-profile-dropdown li:hover{
+    color: #175784;
+}
+.nav-profile-dropdown img{
+    width: 20px;
+}
+@media (max-width:1050px) {
+    .navbar .logo{
+        width: 140px;
+    }
+    .navbar-menu{
+        gap: 20px;
+        font-size: 17px;
+    }
+    .navbar-right{
+        gap: 30px;
+    }
+    .navbar-right img{
+        width: 22px;
+    }
+    .navbar-right button{
+        padding: 8px 25px;
+    }
+}
+
+@media (max-width:900px) {
+    .navbar .logo{
+        width: 140px;
+    }
+    .navbar-menu{
+        gap: 15px;
+        font-size: 16px;
+    }
+    .navbar-right{
+        gap: 20px;
+    }
+    .navbar-right img{
+        width: 20px;
+    }
+    .navbar-right button{
+        padding: 7px 20px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width:750px) {  
+    .navbar-menu{
+        display: none;
+    }
+}
+
+/* Styles to visually separate footer and app-download sections */
+#app-download {
+    padding: 60px 0;
+    background-color: #f5f8ff;
+    margin-bottom: 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  #footer {
+    padding: 50px 0 20px;
+    color: #fff;
+  }
+  
+  /* Add a visual separator if needed */
+  #app-download::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #ccc, transparent);
+    margin-top: 30px;
+  }

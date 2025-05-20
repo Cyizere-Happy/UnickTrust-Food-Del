@@ -1,0 +1,301 @@
+.add-container {
+    display: flex;
+    gap: 25px;
+    padding: 30px;
+    background-color: #e7ecfd;
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+ 
+  .add, .left-add {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    padding: 25px;
+    transition: all 0.3s ease;
+  }
+
+  .add {
+    width: 60%;
+    color: #6d6d6d;
+    font-size: 15px;
+  }
+  
+  .add form {
+    gap: 20px;
+  }
+  
+  .add p {
+    font-weight: 500;
+    margin-bottom: 6px;
+    /* margin-top: 6px; */
+    color: #444;
+    font-size: 12px;
+  }
+  .up{
+    margin-top: 8px;
+  }
+
+  .flex-displaying{
+    display: flex;
+  }
+   .flex-displaying .block-element{
+    margin-left: 50px;
+   }
+
+  /* Left side card styling */
+  .left-add {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(145deg, #ffffff, #f9fafc);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .left-add::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #175784, #3498db);
+  }
+  
+  .left-add img {
+    width: 160px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.08));
+    transition: all 0.5s ease;
+  }
+  
+  .left-add img:hover {
+    transform: translateY(-3px);
+  }
+  
+  .left-add p {
+    color: #444;
+    font-size: 13px;
+    line-height: 1.5;
+    font-weight: 400;
+    margin-top: 10px;
+  }
+  
+  .left-add .celebration {
+    margin-top: 18px;
+    font-size: 14px;
+    color: #175784;
+    background-color: rgba(23, 87, 132, 0.06);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 3px solid #175784;
+    width: 90%;
+  }
+  
+  /* Form element styling */
+  .add-img-upload img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border: 1px dashed #d1d1d1;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .add-img-upload img:hover {
+    border-color: #175784;
+    background-color: rgba(23, 87, 132, 0.03);
+  }
+  
+  .add-product-name, .add-product-description {
+    width: 100%;
+  }
+  
+  .add-product-name input, 
+  .add-product-description textarea,
+  .add-category-price select, 
+  .add-category-price input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.3s ease;
+    font-size: 14px;
+  }
+  
+  .add-product-name input:focus, 
+  .add-product-description textarea:focus,
+  .add-category-price select:focus, 
+  .add-category-price input:focus {
+    border-color: #175784;
+    box-shadow: 0 0 0 2px rgba(23, 87, 132, 0.08);
+  }
+  
+  .add-category-price {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .add-category, .add-price {
+    flex: 1;
+  }
+  
+  .add-btn {
+    padding: 10px 20px;
+    background-color: #175784;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+    box-shadow: 0 2px 8px rgba(23, 87, 132, 0.15);
+  }
+  
+  .add-btn:hover {
+    background-color: #124e7a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(23, 87, 132, 0.2);
+  }
+  
+  .add-btn:active {
+    transform: translateY(0) scale(0.98);
+  }
+  
+  /* Toast notification styling */
+  .Toastify__toast--success {
+    border-left: 3px solid #175784 !important;
+    color: #175784;
+  }
+  
+  .Toastify__toast--success svg {
+    fill: #175784 !important;
+  }
+  
+  .Toastify__toast--success .Toastify__progress-bar {
+    background-color: #175784 !important;
+  }
+  
+  /* Additional styling for the celebration section */
+  .left-add .celebration {
+    margin-top: 20px;
+    background-color: rgba(23, 87, 132, 0.05);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 3px solid #175784;
+    width: 90%;
+    text-align: left;
+  }
+  
+  .left-add .celebration h3 {
+    color: #175784;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .left-add .celebration p {
+    font-size: 11px;
+    color: #555;
+    margin-bottom: 12px;
+  }
+  
+  .stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    background-color: white;
+    border-radius: 6px;
+    width: 45%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  }
+  
+  .stat-number {
+    font-size: 15px;
+    font-weight: 600;
+    color: #175784;
+  }
+  
+  .stat-label {
+    font-size: 11px;
+    color: #777;
+    margin-top: 2px;
+  }
+  
+  /* Add a subtle hover effect to the cards */
+  .add:hover, .left-add:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Add a header style */
+  .add h2 {
+    color: #175784;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 10px;
+  }
+  
+  .add h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #175784, #3498db);
+    border-radius: 2px;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 1024px) {
+    .add-container {
+      flex-direction: column;
+      padding: 20px;
+    }
+    
+    .add, .left-add {
+      width: 100%;
+      margin-left: 0;
+    }
+    
+    .left-add {
+      order: -1;
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .add-category-price {
+      flex-direction: column;
+      gap: 15px;
+    }
+    .flex-displaying{
+        display: block;
+
+    }
+    .flex-displaying .block-element{
+        margin-left: 0px;
+       }
+  }

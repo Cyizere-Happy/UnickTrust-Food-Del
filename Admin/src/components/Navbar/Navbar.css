@@ -1,0 +1,130 @@
+.dashboard-intro {
+  background-color: #e7ecfd;
+  width: 100%;
+  padding: 20px;
+
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center;     /* Align items vertically */
+  gap: 20px;               /* Optional: spacing between items */
+}
+
+  .dashboard-header {
+    margin-bottom: 10px;
+    margin-left: 50px;
+  }
+  
+  .dashboard-header h1 {
+    color: #175784;
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 10px;
+  }
+  .dashboard-header h1::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #175784, #3498db);
+    border-radius: 2px;
+  }
+  
+  .dashboard-header p {
+    font-size: 9px;
+    color: #666;
+  }
+  
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    flex: 1 1 200px;
+    min-width: 180px;
+    max-width: 220px;
+    padding: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .card:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  }
+  
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .card-icon {
+    background: #f0f0f0;
+    padding: 8px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .icon.green {
+    color: #22c55e;
+  }
+  
+  .icon.yellow {
+    color: #eab308;
+  }
+  
+  .icon.blue {
+    color: #3b82f6;
+  }
+  
+  .icon.purple {
+    color: #8b5cf6;
+  }
+  
+  .card-change {
+    font-size: 10px;
+    font-weight: bold;
+  }
+  
+  .card-change.positive {
+    color: #22c55e;
+  }
+  
+  .card-change.negative {
+    color: #ef4444;
+  }
+  
+  .card-title {
+    font-size: 12px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 8px;
+  }
+  
+  .card-value {
+    font-size: 13px;
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 8px;
+  }
+  
+  .card-message {
+    font-size: 12px;
+    color: #555;
+    line-height: 1.4;
+  }

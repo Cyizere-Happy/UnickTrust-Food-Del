@@ -1,0 +1,232 @@
+.stock-list {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 1100px;
+  margin: 0px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+.stock-list-description-wrapper{
+    overflow-x: scroll;
+    width: 300px;
+}
+.stock-list h2 {
+  color: #175784;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.stock-list h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, #175784, #3498db);
+  border-radius: 2px;
+}
+
+.stock-list-table {
+  width: 100%;
+  color: #444;
+}
+
+.stock-list-table-format {
+  display: grid;
+  grid-template-columns: 60px 1.5fr 1fr 0.8fr 2fr 0.5fr; /* Adjusted for Image, Name, Category, Quantity, Description, Action */
+  gap: 12px;
+  align-items: center;
+  padding: 12px 15px;
+  font-size: 12px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.stock-list-table-format:hover {
+  background-color: #f1f3fa;
+}
+
+.stock-list-table-format img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.stock-list-table-format p {
+  margin: 0;
+  font-size: 12px;
+  color: #444;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.stock-list-table-format.stock-list-title {
+  background-color: #e9ecf9;
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+}
+
+.stock-list-cursor {
+  cursor: pointer;
+  color: #ef4444;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .stock-list-table-format {
+    grid-template-columns: 60px 2fr 0.5fr; /* Show Image, Name, and Action only */
+    gap: 10px;
+  }
+
+  .stock-list-table-format.stock-list-title {
+    display: none;
+  }
+
+  .stock-list-table-format p:nth-child(3),
+  .stock-list-table-format p:nth-child(4),
+  .stock-list-table-format p:nth-child(5) {
+    display: none; /* Hide Category, Quantity, Description on mobile */
+  }
+
+  .stock-list-error {
+    flex-direction: column;
+  }
+}
+
+.stock-list-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.stock-list-pagination-nav {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #64748b;
+  outline: none;
+  font-size: 12px;
+  transition: color 0.2s ease;
+}
+
+.stock-list-pagination-nav:hover {
+  color: #175784;
+}
+
+.stock-list-pagination-nav:disabled {
+  color: #d1d5db;
+  cursor: not-allowed;
+}
+
+.stock-list-pagination-pages {
+  display: flex;
+  gap: clamp(6px, 2vw, 20px);
+}
+
+.stock-list-pagination-button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #e9ecf9;
+  color: #444;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.stock-list-pagination-button.active {
+  background-color: #175784;
+  color: #ffffff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.stock-list-error {
+  width: 100%;
+  min-height: 60vh;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px 20px;
+  background: #f8fafc;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  color: #475569;
+}
+
+.stock-list-error-image {
+  width: 120px;
+  height: auto;
+  opacity: 0.9;
+}
+
+.stock-list-error-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e293b;
+  font-family: 'Merriweather', serif;
+  margin: 15px 0;
+}
+
+.stock-list-error-message {
+  font-size: 13px;
+  max-width: 600px;
+  line-height: 1.6;
+  font-family: 'Merriweather', serif;
+  color: #64748b;
+  text-align: center;
+}
+
+.stock-list-contact-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  max-width: 400px;
+  width: 100%;
+  margin-top: 10px;
+  border-right: 3px solid #175784;
+}
+
+.stock-list-contact-card h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #175784;
+  font-family: 'Merriweather', serif;
+}
+
+.stock-list-contact-card p {
+  margin: 5px 0;
+  color: #475569;
+  font-family: 'Merriweather', serif;
+  font-size: 11px;
+  text-align: start;
+}
+
+.stock-list-contact-info a {
+  color: #175784;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.stock-list-contact-info a:hover {
+  text-decoration: underline;
+}
+

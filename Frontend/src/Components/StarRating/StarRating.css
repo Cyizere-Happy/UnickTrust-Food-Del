@@ -1,0 +1,35 @@
+.star-rating {
+    display: flex;
+    width: 70px;
+  }
+  
+  .star {
+    position: relative;
+    cursor: pointer;
+    margin-right: 2px;
+    transition: transform 0.2s ease;
+  }
+  
+  .star input {
+    display: none;
+  }
+  
+  .star-icon {
+    transition: fill 0.3s ease, transform 0.2s ease; 
+    stroke: #175784;
+  }
+  
+  .star:hover .star-icon {
+    transform: scale(1);
+  }
+  
+  .star.filled .star-icon {
+    fill: #175784; 
+    border-color: #175784; 
+  }
+  
+  .star .star-icon {
+    fill: #d9eaf7; 
+    border-color: #175784;
+  }
+  
